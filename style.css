@@ -125,7 +125,7 @@ table{
 td img{
     width: 100px;
 }
-tr:first-child.hide{
+tr.no-hide{
     display: table-row !important;
     width: 100%;
 }

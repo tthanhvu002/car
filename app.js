@@ -41,7 +41,6 @@ let i = 0
 const saveBtn = document.querySelector('.save')
 const table = document.querySelector('table')
 const remove = document.querySelector('.remove')
-const row = document.querySelectorAll('table tr')
 
 saveBtn.onclick = () => {
     let flag = 0
@@ -97,6 +96,8 @@ saveBtn.onclick = () => {
         `
         i++
         table.innerHTML += html.trim()
+        const row = document.querySelectorAll('table tr')
+
         row.forEach(item => {
             item.onclick = () => {
                 document.querySelector('.car-name').value = item.querySelector('td:nth-child(2)').innerHTML
@@ -115,19 +116,7 @@ saveBtn.onclick = () => {
                     }
                 }
             }
-            search.oninput = (e) => {
-                if(e.target.value != ''){
-                    row.forEach(item => {
-                        
-                        if(item.querySelector('td:nth-child(2)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(4)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(5)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(6)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(8)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(7)').innerHTML.includes(e.target.value)){
-                            item.classList.remove('hide')
-                        } else{
-                            item.classList.add('hide')
-                        }
-                    })
-                }
-                
-            }
+            
         })
     }
 }
@@ -136,3 +125,18 @@ saveBtn.onclick = () => {
 const str = 'abcdsfasdfasefhoaihwlknefalwnd'
 
 const search = document.querySelector('.search')
+search.oninput = (e) => {
+    const row = document.querySelectorAll('table tr')
+
+    if(e.target.value != ''){
+        row.forEach(item => {
+            console.log(item);
+            if(item.querySelector('td:nth-child(2)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(4)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(5)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(6)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(8)').innerHTML.includes(e.target.value) || item.querySelector('td:nth-child(7)').innerHTML.includes(e.target.value)){
+                item.classList.remove('hide')
+            } else{
+                item.classList.add('hide')
+            }
+        })
+    }
+    
+}
