@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    
+    <div class="row">
+        <div class="col-lg-4 col-md-12">
+            <div class="header">
+                thông tin về xe ô tô
+            </div>
+            <div class="main-section">
+                <div class="input-wrap">
+                    <p class= "required">Tên xe <span>*</span>:</p>
+                    <input type="text" class="car-name">
+                </div>
+                <div class="input-wrap">
+                    <p>Hình Ảnh:</p>
+                    <input type="text" class="img">
+                </div>
+                <div class="input-wrap">
+                    <p class= "required">Hãng xe <span>*</span>:</p>
+                    <div class="dropdown">
+                        <div class="caption">Select</div>
+                        <div class="list">
+                            <div class="item-wrap">
+                                <div class="item-heading">
+                                    Swedish Cars
+                                    
+                                </div>
+                                <div class="item">Volvo</div>
+                                <div class="item">Saab</div>
+                            </div>
+                            <div class="item-wrap">
+                                <div class="item-heading">
+                                    Swedish Cars
+                                    
+                                </div>
+                                <div class="item">Mercedes</div>
+                                <div class="item">Audi</div>
+
+                            </div> 
+                            
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="input-wrap">
+                    <p class= "required">Giá tiền <span>*</span> :</p>
+                    <input type="text" class="price">
+                </div>
+                <div class="input-wrap">
+                    <p>Mô tả</p>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div> 
+                <div class="input-wrap">
+                    <p class= "required">Người liên hệ <span>*</span>:</p>
+                    <input type="text" class="person">
+                </div>
+                <div class="input-wrap">
+                    <p class= "required"> Số điện thoại người liên hệ <span>*</span>:</p>
+                    <input type="text" class="number">
+                </div>
+                <div class="input-wrap">
+                    <p class= "required">Email <span>*</span>:</p>
+                    <input type="text" class="email">
+                </div>
+                <div class="btn-wrap">
+                    <div class="save">Lưu</div>
+                    <div class="remove">Xoá</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-12">
+                <div class="header">Danh sách xe ô tô</div>
+                <input type="text" placeholder="Tìm kiếm" class="search">
+                <table>
+                    <tr >
+                        <td>STT</td>
+                        <td>Hình Ảnh</td>
+                        <td>Tên Xe</td>
+                        <td>Hãng Xe</td>
+                        <td>Giá Tiền</td>
+                        <td>Người Liên Hệ</td>
+                        <td>Điện Thoại</td>
+                        <td>Email</td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
