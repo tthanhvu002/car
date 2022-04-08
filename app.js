@@ -113,6 +113,7 @@ saveBtn.onclick = () => {
                     if(confirm("Ban co muon xoa dong nay")){
                         console.log(item);
                         item.classList.add('hide')
+                        item.remove()
                     }
                 }
             }
